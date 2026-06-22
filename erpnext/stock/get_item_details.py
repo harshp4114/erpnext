@@ -526,6 +526,8 @@ def get_basic_details(ctx: ItemDetailsCtx, item, overwrite_warehouse=True) -> It
 			"base_amount": 0.0,
 			"net_rate": 0.0,
 			"net_amount": 0.0,
+			"margin_type": None,
+			"margin_rate_or_amount": 0.0,
 			"discount_percentage": 0.0,
 			"discount_amount": flt(ctx.discount_amount) or 0.0,
 			"update_stock": ctx.update_stock if ctx.doctype in ["Sales Invoice", "Purchase Invoice"] else 0,
