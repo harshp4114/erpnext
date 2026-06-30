@@ -3063,7 +3063,7 @@ def update_multi_mode_option(doc, pos_profile):
 		payment.account = payment_mode.default_account
 		payment.type = payment_mode.type
 
-	mop_refetched = bool(doc.payments) and not doc.is_created_using_pos
+	mop_refetched = doc.doctype == "Sales Invoice" and bool(doc.payments) and not doc.is_created_using_pos
 
 	doc.set("payments", [])
 	invalid_modes = []
